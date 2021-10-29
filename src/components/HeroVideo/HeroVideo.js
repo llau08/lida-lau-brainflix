@@ -1,9 +1,9 @@
-import Data from '../../data/video-details.json';
+import '../../components/HeroVideo/HeroVideo.scss';
 
-export default function HeroVideo(){
+export default function HeroVideo(props){
     return(
-        <video>
-            <source width="750" src={Data[0].video} type={Data[0].video}></source>
-        </video>
+    <article>
+        <video className="video" poster={props.heroVideo.image}></video>
+    </article>
     )
 }

@@ -1,0 +1,7 @@
+@use "../../styles/partials/variables" as *;
+
+.video {
+  width: 288px;
+  background-color: $mercury;
+  border-radius: 4px;
+}

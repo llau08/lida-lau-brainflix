@@ -1,26 +1,26 @@
 import views from '../../assets/icons/views.svg';
 import likes from '../../assets/icons/likes.svg';
-import Data from '../../data/video-details.json';
+import "../../components/AboutVideo/AboutVideo.scss";
 
-const formatTimestamp = Intl.DateTimeFormat('en-US',{
-    year: "numeric",
-    month: "numeric",
-    day: "2-digit",
-}).format(Data[0].timestamp);
+export default function AboutVideo (props){
+    const formatTimestamp = Intl.DateTimeFormat('en-US',{
+        year: "numeric",
+        month: "numeric",
+        day: "2-digit",
+    }).format(props.video.timestamp);
 
-export default function AboutVideo (){
     return(
-    <section>
-        <h1>{Data[0].title}</h1>
+    <section className="about">
+        <h1>{props.video.title}</h1>
         <hr />
         <ul>
-            <li>{Data[0].channel}</li>
-            <li><img src={likes}/>{Data[0].likes}</li>
+            <li>{props.video.channel}</li>
+            <li><img src={likes}/>{props.video.likes}</li>
             <li>{formatTimestamp}</li>
-            <li><img src={views}/>{Data[0].views}</li>
+            <li><img src={views}/>{props.video.views}</li>
         </ul>
         <hr />
-        <p>{Data[0].description}</p>
+        <p>{props.video.description}</p>
         <h4>3 Comments</h4>
     </section> 
     )

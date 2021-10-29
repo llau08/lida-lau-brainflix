@@ -1,0 +1,1 @@
+import Data from "../../data/video-details.json";
