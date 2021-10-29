@@ -1,0 +1,16 @@
+@use "../../styles/partials/variables" as *;
+
+.next {
+  padding: 24px 16px 16px 16px;
+
+  &__indv-box {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.next__img {
+  border-radius: 4px;
+  width: 200px;
+  height: 150px;
+}

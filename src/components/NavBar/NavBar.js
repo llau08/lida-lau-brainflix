@@ -6,12 +6,12 @@ import SearchBar from "../SearchBar/SearchBar";
 export default function NavBar(){
     return (
         <nav className="nav">
-            <a href="#">
+            <a href="/home">
             <img className="nav__logo" src={Logo} alt="BrainFlix Logo"></img></a>
             <SearchBar />
             <img className="nav__avatar" src={Avatar} alt="avatar image"/>
             <button className="nav__btn">
-                <img src={Upload}/>UPLOAD
+                <img src={Upload} alt="upload icon"/>UPLOAD
             </button>
         </nav>
     )

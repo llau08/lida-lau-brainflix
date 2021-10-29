@@ -1,0 +1,8 @@
+@use "../../App.scss" as *;
+
+.commments {
+  padding: 24px 16px 16px 16px;
+}
+.comments__avatar {
+  @extend .nav__avatar;
+}

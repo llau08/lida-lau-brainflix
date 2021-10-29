@@ -15,9 +15,9 @@ export default function AboutVideo (props){
         <hr />
         <ul>
             <li>{props.video.channel}</li>
-            <li><img src={likes}/>{props.video.likes}</li>
+            <li><img src={likes} alt="heart icon"/>{props.video.likes}</li>
             <li>{formatTimestamp}</li>
-            <li><img src={views}/>{props.video.views}</li>
+            <li><img src={views} alt="eye icon"/>{props.video.views}</li>
         </ul>
         <hr />
         <p>{props.video.description}</p>
