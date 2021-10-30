@@ -7,6 +7,10 @@
   text-align: left;
   min-width: 320px;
 
+  @include tablet {
+    padding: 36px 24px 24px 24px;
+  }
+
   &__title {
     @include mpg-header;
     padding-bottom: 16px;
@@ -22,6 +26,10 @@
     padding-top: 16px;
     padding-bottom: 16px;
     border-bottom: 1px solid $mercury;
+
+    @include tablet {
+      flex-wrap: nowrap;
+    }
   }
 
   &__list-i {
@@ -30,6 +38,12 @@
     &--bold {
       font-weight: bold;
       padding-bottom: 16px;
+    }
+
+    @include tablet {
+      width: 10%;
+      display: flex;
+      align-self: center;
     }
   }
 

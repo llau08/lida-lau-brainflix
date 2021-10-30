@@ -12,6 +12,11 @@ h3 {
   padding: 24px 16px 16px 16px;
   min-width: 320px;
 
+  @include tablet {
+    padding: 36px 24px 24px 24px;
+    width: 344px;
+  }
+
   &__indv-box {
     display: flex;
     justify-content: space-between;
@@ -43,5 +48,9 @@ h3 {
     -webkit-line-clamp: 2;
     text-overflow: ellipsis;
     margin-bottom: 18px;
+
+    @include tablet {
+      -webkit-box-orient: unset;
+    }
   }
 }

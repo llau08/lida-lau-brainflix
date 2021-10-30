@@ -1,11 +1,13 @@
 @use "../../styles/partials/variables" as *;
 @use "../../App.scss" as *;
+@use "../../styles/partials/mixins" as *;
 
 .video {
-  height: 179px;
   width: 320px;
   background-color: $mercury;
 
-  &__scrub {
+  @include tablet {
+    width: 768px;
+    background-color: $black;
   }
 }

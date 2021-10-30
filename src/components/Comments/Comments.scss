@@ -8,10 +8,22 @@
   display: flex;
   border-bottom: 1px solid $mercury;
 
+  @include tablet {
+    margin-left: 24px;
+    margin-right: 24px;
+    min-width: 768px;
+    padding-bottom: 24px;
+  }
+
   //Comments Form
   &__form {
     display: flex;
     flex-direction: column;
+
+    @include tablet {
+      width: 685px;
+      position: relative;
+    }
   }
 
   //Join Convo Label
@@ -34,6 +46,11 @@
     padding: 10px;
     font-family: "Avenir Next Reg";
 
+    @include tablet {
+      height: 40px;
+      width: 63%;
+    }
+
     &::placeholder {
       color: $black;
       font-family: "Avenir Next Reg";
@@ -55,6 +72,10 @@
   &__icon {
     position: relative;
     right: 65px;
+
+    @include tablet {
+      right: 50px;
+    }
   }
 
   //Comment Btn
@@ -70,5 +91,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @include tablet {
+      width: 210px;
+      position: absolute;
+      left: 67%;
+      top: 11.5%;
+    }
   }
 }
