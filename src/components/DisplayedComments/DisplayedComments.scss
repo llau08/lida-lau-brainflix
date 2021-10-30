@@ -1,0 +1,49 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../App.scss" as *;
+
+h4 {
+  @include msub-header;
+  color: $black;
+}
+
+.displayed-comm {
+  margin-left: 16px;
+  margin-right: 16px;
+  border-bottom: 1px solid $mercury;
+  display: flex;
+  min-width: 288px;
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-left: 16px;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 16px;
+  }
+
+  &__avatar {
+    margin-top: 16px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: $mercury;
+  }
+
+  &__txt {
+    @include mbody;
+  }
+
+  &__date {
+    @include mbody;
+    color: $silver;
+  }
+}

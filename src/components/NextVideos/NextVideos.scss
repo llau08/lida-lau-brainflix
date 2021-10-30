@@ -1,16 +1,47 @@
 @use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../App.scss" as *;
+
+h3 {
+  @include mbody;
+  padding-bottom: 24px;
+  color: $silver;
+}
 
 .next {
   padding: 24px 16px 16px 16px;
+  min-width: 320px;
 
   &__indv-box {
     display: flex;
+    justify-content: space-between;
     align-items: center;
+    margin-bottom: 16px;
   }
-}
 
-.next__img {
-  border-radius: 4px;
-  width: 200px;
-  height: 150px;
+  &__img {
+    border-radius: 4px;
+    width: 120px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__names {
+    @include mbody;
+    width: 150px;
+  }
+
+  &__video-title {
+    @include msub-header;
+    color: $black;
+    line-height: 1rem;
+    max-height: 2rem;
+    overflow: hidden !important;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+    margin-bottom: 18px;
+  }
 }

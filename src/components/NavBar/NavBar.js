@@ -11,7 +11,7 @@ export default function NavBar(){
             <SearchBar />
             <img className="nav__avatar" src={Avatar} alt="avatar image"/>
             <button className="nav__btn">
-                <img src={Upload} alt="upload icon"/>UPLOAD
+                <img className="nav__icon" src={Upload} alt="upload icon"/>UPLOAD
             </button>
         </nav>
     )

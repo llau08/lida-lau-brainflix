@@ -1,0 +1,63 @@
+@use "./variables" as *;
+
+//MOBILE TXT STYLES
+@mixin mpg-header {
+  font-family: "Avenir Next Bold", "sans-serif";
+  font-size: 24px;
+  line-height: 32px;
+}
+
+@mixin msec-header {
+  font-family: "Avenir Next Bold", "sans-serif";
+  font-size: 12px;
+  line-height: 20px;
+}
+
+@mixin msub-header {
+  font-family: "Avenir Next Bold", "sans-serif";
+  font-size: 13px;
+  line-height: 18px;
+}
+
+@mixin mbody {
+  font-family: "Avenir Next Reg", "sans-serif";
+  font-size: 13px;
+  line-height: 18px;
+}
+
+@mixin mlabel-btn {
+  font-family: "Avenir Next Bold", "sans-serif";
+  font-size: 12px;
+  line-height: 20px;
+}
+
+//DESKTOP TABLET STYLES
+@mixin tdpg-header {
+  font-family: "Avenir Next Bold", "sans-serif";
+  font-size: 33px;
+  line-height: 44px;
+}
+
+@mixin tdsec-header {
+  font-family: "Avenir Next Bold", "sans-serif";
+  font-size: 12px;
+  line-height: 20px;
+}
+
+@mixin tdsub-header {
+  font-family: "Avenir Next Bold", "sans-serif";
+  font-size: 14px;
+  line-height: 22px;
+}
+
+@mixin tdbody {
+  font-family: "Avenir Next Reg", "sans-serif";
+  font-size: 14px;
+  line-height: 22px;
+}
+
+@mixin tdlabel-btn {
+  font-family: "Avenir Next Bold", "sans-serif";
+  font-size: 12px;
+  line-height: 20px;
+}

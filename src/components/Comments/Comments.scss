@@ -1,8 +1,74 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
 @use "../../App.scss" as *;
 
-.commments {
-  padding: 24px 16px 16px 16px;
-}
-.comments__avatar {
-  @extend .nav__avatar;
+.comments {
+  margin-left: 16px;
+  margin-right: 16px;
+  display: flex;
+  border-bottom: 1px solid $mercury;
+
+  //Comments Form
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  //Join Convo Label
+  &__label {
+    @include mlabel-btn;
+    color: $silver;
+    margin-left: 16px;
+    margin-bottom: 4px;
+  }
+
+  //Comment Txt Area
+  &__field {
+    border-color: $mercury;
+    border-radius: 4px;
+    background-color: $alabaster;
+    resize: none;
+    margin-left: 16px;
+    height: 100px;
+    width: 236px;
+    padding: 10px;
+    font-family: "Avenir Next Reg";
+
+    &::placeholder {
+      color: $black;
+      font-family: "Avenir Next Reg";
+    }
+
+    &:active {
+      border-color: $blue;
+    }
+  }
+
+  //Comments Avatar
+  &__avatar {
+    @extend .nav__avatar;
+    margin-top: 20px;
+    margin-left: 0;
+  }
+
+  //Comment Icon
+  &__icon {
+    position: relative;
+    right: 65px;
+  }
+
+  //Comment Btn
+  &__btn {
+    @include mlabel-btn;
+    border-style: unset;
+    border-radius: 4px;
+    background-color: $blue;
+    color: $white;
+    margin: 16px;
+    height: 40px;
+    width: 236px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
