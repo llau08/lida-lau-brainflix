@@ -9,12 +9,18 @@
 
   @include tablet {
     padding: 36px 24px 24px 24px;
+    min-width: 768px;
   }
 
   &__title {
     @include mpg-header;
     padding-bottom: 16px;
     border-bottom: 1px solid $mercury;
+
+    @include tablet {
+      @include tdpg-header;
+      border-bottom: none;
+    }
   }
 
   &__list {
@@ -28,22 +34,57 @@
     border-bottom: 1px solid $mercury;
 
     @include tablet {
-      flex-wrap: nowrap;
+      flex-wrap: wrap-reverse;
+      align-self: center;
+      @include tdbody;
+      color: $silver;
     }
   }
 
   &__list-i {
     width: 50%;
-
-    &--bold {
-      font-weight: bold;
-      padding-bottom: 16px;
-    }
+    color: $silver;
+    @include mbody;
 
     @include tablet {
-      width: 10%;
+      width: 15%;
       display: flex;
       align-self: center;
+    }
+
+    &--bold {
+      padding-bottom: 16px;
+      @include msub-header;
+      color: $black;
+
+      @include tablet {
+        display: flex;
+        align-self: center;
+        padding: 0;
+        @include tdsub-header;
+        order: -2;
+      }
+    }
+
+    &--three {
+      width: 50%;
+      color: $silver;
+      @include mbody;
+
+      @include tablet {
+        order: 1;
+        margin-left: 40%;
+      }
+    }
+
+    &--two {
+      width: 50%;
+      color: $silver;
+      @include mbody;
+
+      @include tablet {
+        order: -2;
+      }
     }
   }
 
@@ -56,5 +97,15 @@
     padding-top: 16px;
     padding-bottom: 16px;
     color: $black;
+
+    @include tablet {
+      @include tdbody;
+    }
+  }
+
+  &__count {
+    @include msub-header;
+    color: $black;
+    padding: 0;
   }
 }

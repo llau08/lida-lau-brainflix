@@ -17,6 +17,10 @@ h3 {
     width: 344px;
   }
 
+  @include desktop {
+    margin-right: 0;
+  }
+
   &__indv-box {
     display: flex;
     justify-content: space-between;

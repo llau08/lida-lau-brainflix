@@ -11,7 +11,6 @@
   @include tablet {
     margin-left: 24px;
     margin-right: 24px;
-    min-width: 768px;
     padding-bottom: 24px;
   }
 
@@ -32,6 +31,10 @@
     color: $silver;
     margin-left: 16px;
     margin-bottom: 4px;
+
+    @include tablet {
+      @include tdlabel-btn;
+    }
   }
 
   //Comment Txt Area
@@ -66,6 +69,7 @@
     @extend .nav__avatar;
     margin-top: 20px;
     margin-left: 0;
+    order: initial;
   }
 
   //Comment Icon
@@ -97,6 +101,7 @@
       position: absolute;
       left: 67%;
       top: 11.5%;
+      @include tdlabel-btn;
     }
   }
 }

@@ -4,6 +4,7 @@ import Avatar from "../../assets/images/Mohan-muruge.jpg";
 export default function DisplayedComments(props){
     return (
         <>
+        
         {props.comment.map((comment)=>{
              const formatTimestamp = Intl.DateTimeFormat('en-US',{
                 year: "numeric",

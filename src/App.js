@@ -8,6 +8,7 @@ import Data from './data/video-details.json';
 import { Component } from 'react';
 import './App.scss';
 
+
 class App extends Component {
   state = {
     video: Data,
@@ -27,9 +28,9 @@ class App extends Component {
     <div className="App">
       <Header />
       <HeroVideo heroVideo={this.state.heroVideo} />
-      <AboutVideo video={this.state.heroVideo}/>
-      <Comments />
-      <DisplayedComments comment={this.state.heroVideo.comments}/> 
+        <AboutVideo video={this.state.heroVideo} />
+        <Comments />
+        <DisplayedComments comment={this.state.heroVideo.comments}/>
       <NextVideos heroVideo={this.state.heroVideo} video={this.state.video} handleClick={this.handleClick}/>
     </div>
   );

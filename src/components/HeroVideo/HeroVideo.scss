@@ -3,11 +3,15 @@
 @use "../../styles/partials/mixins" as *;
 
 .video {
-  width: 320px;
-  background-color: $mercury;
+  &__poster {
+    min-width: 320px;
+    height: 56vw;
+    background-color: $mercury;
 
-  @include tablet {
-    width: 768px;
-    background-color: $black;
+    @include tablet {
+      height: 400px;
+      width: 100vw;
+      background-color: $darkblack;
+    }
   }
 }
