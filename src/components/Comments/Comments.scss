@@ -3,24 +3,31 @@
 @use "../../App.scss" as *;
 
 .comments {
-  margin-left: 16px;
-  margin-right: 16px;
+  margin-left: 1rem;
+  margin-right: 1rem;
   display: flex;
   border-bottom: 1px solid $mercury;
+  min-width: 18rem;
 
   @include tablet {
-    margin-left: 24px;
-    margin-right: 24px;
-    padding-bottom: 24px;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  @include desktop {
+    margin-right: 0;
+    padding-right: 1.5rem;
+    border-bottom: none;
   }
 
   //Comments Form
   &__form {
     display: flex;
     flex-direction: column;
+    width: 100%;
 
     @include tablet {
-      width: 685px;
       position: relative;
     }
   }
@@ -29,8 +36,8 @@
   &__label {
     @include mlabel-btn;
     color: $silver;
-    margin-left: 16px;
-    margin-bottom: 4px;
+    margin-left: 1rem;
+    margin-bottom: 0.25rem;
 
     @include tablet {
       @include tdlabel-btn;
@@ -40,34 +47,35 @@
   //Comment Txt Area
   &__field {
     border-color: $mercury;
-    border-radius: 4px;
+    border-radius: 0.25rem;
     background-color: $alabaster;
     resize: none;
-    margin-left: 16px;
-    height: 100px;
-    width: 236px;
-    padding: 10px;
+    margin-left: 1rem;
+    height: 6.25rem;
+    width: 14.75rem;
+    padding: 0.625rem;
     font-family: "Avenir Next Reg";
+    outline-color: $blue;
 
     @include tablet {
-      height: 40px;
-      width: 63%;
+      height: 2.5rem;
+      width: 72%;
+    }
+
+    @include desktop {
+      width: 70.5%;
     }
 
     &::placeholder {
       color: $black;
       font-family: "Avenir Next Reg";
     }
-
-    &:active {
-      border-color: $blue;
-    }
   }
 
   //Comments Avatar
   &__avatar {
     @extend .nav__avatar;
-    margin-top: 20px;
+    margin-top: 1.25rem;
     margin-left: 0;
     order: initial;
   }
@@ -75,10 +83,10 @@
   //Comment Icon
   &__icon {
     position: relative;
-    right: 65px;
+    right: 4.0625rem;
 
     @include tablet {
-      right: 50px;
+      right: 1.25rem;
     }
   }
 
@@ -86,22 +94,31 @@
   &__btn {
     @include mlabel-btn;
     border-style: unset;
-    border-radius: 4px;
+    border-radius: 0.25rem;
     background-color: $blue;
     color: $white;
-    margin: 16px;
-    height: 40px;
-    width: 236px;
+    margin: 1rem;
+    height: 2.5rem;
+    width: 14.75rem;
     display: flex;
     justify-content: center;
     align-items: center;
 
+    &:hover {
+      background-color: $darkblue;
+      cursor: pointer;
+    }
+
     @include tablet {
-      width: 210px;
+      width: 9.375rem;
       position: absolute;
-      left: 67%;
+      left: 75.5%;
       top: 11.5%;
       @include tdlabel-btn;
+    }
+
+    @include desktop {
+      left: 74%;
     }
   }
 }

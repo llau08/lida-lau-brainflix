@@ -1,11 +1,9 @@
 import '../DisplayedComments/DisplayedComments.scss';
-import Avatar from "../../assets/images/Mohan-muruge.jpg";
 
 export default function DisplayedComments(props){
     return (
         <>
-        
-        {props.comment.map((comment)=>{
+        {props.comment.map((comment, index)=>{
              const formatTimestamp = Intl.DateTimeFormat('en-US',{
                 year: "numeric",
                 month: "2-digit",
@@ -13,8 +11,8 @@ export default function DisplayedComments(props){
             }).format(comment.timestamp);
 
             return(
-                <article className="displayed-comm">
-                    <img className="displayed-comm__avatar" src={Avatar} alt="avatar image"/>
+                <article key={index} className="displayed-comm">
+                    <div className="displayed-comm__avatar"></div>
                     <div className="displayed-comm__box">
                         <div className="displayed-comm__header">
                             <h4>{comment.name}</h4>

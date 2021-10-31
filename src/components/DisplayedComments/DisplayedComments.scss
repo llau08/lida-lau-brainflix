@@ -5,50 +5,88 @@
 h4 {
   @include msub-header;
   color: $black;
+
+  @include tablet {
+    @include tdsub-header;
+  }
 }
 
 .displayed-comm {
-  margin-left: 16px;
-  margin-right: 16px;
+  margin-left: 1rem;
+  margin-right: 1rem;
   border-bottom: 1px solid $mercury;
   display: flex;
-  min-width: 288px;
+  justify-content: space-between;
+  min-width: 18rem;
 
   @include tablet {
-    margin-left: 24px;
-    margin-right: 24px;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+
+  @include desktop {
+    margin-right: 0;
+    padding-right: 1.5rem;
+    border-bottom: 0;
+    border-top: 1px solid $mercury;
   }
 
   &__box {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-top: 16px;
-    margin-bottom: 16px;
-    margin-left: 16px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    width: 82%;
+
+    @include tablet {
+      width: 93%;
+    }
+
+    @include desktop {
+      margin-top: 1.5rem;
+    }
   }
 
   &__header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-bottom: 16px;
+    padding-bottom: 1rem;
   }
 
   &__avatar {
-    margin-top: 16px;
-    width: 36px;
-    height: 36px;
+    margin-top: 1rem;
+    width: 2.25rem;
+    height: 2.25rem;
     border-radius: 50%;
     background-color: $mercury;
+
+    @include tablet {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+
+    @include desktop {
+      margin-top: 1.5rem;
+    }
   }
 
   &__txt {
     @include mbody;
+
+    @include tablet {
+      @include tdbody;
+    }
   }
 
   &__date {
     @include mbody;
     color: $silver;
+
+    @include tablet {
+      @include tdbody;
+    }
   }
 }

@@ -4,14 +4,18 @@
 
 .video {
   &__poster {
-    min-width: 320px;
+    min-width: 20rem;
     height: 56vw;
     background-color: $mercury;
 
     @include tablet {
-      height: 400px;
+      height: 25rem;
       width: 100vw;
       background-color: $darkblack;
+    }
+
+    @include desktop {
+      height: 30rem;
     }
   }
 }

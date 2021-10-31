@@ -1,4 +1,3 @@
-import Header from './components/Header/Header';
 import HeroVideo from './components/HeroVideo/HeroVideo';
 import AboutVideo from "./components/AboutVideo/AboutVideo";
 import Comments from "./components/Comments/Comments";
@@ -7,6 +6,7 @@ import NextVideos from './components/NextVideos/NextVideos';
 import Data from './data/video-details.json';
 import { Component } from 'react';
 import './App.scss';
+import NavBar from './components/NavBar/NavBar';
 
 
 class App extends Component {
@@ -26,12 +26,18 @@ class App extends Component {
   render(){
   return (
     <div className="App">
-      <Header />
+      <header>
+      <NavBar />
       <HeroVideo heroVideo={this.state.heroVideo} />
+      </header>
+      <main className="main">
+        <div className="main__content">
         <AboutVideo video={this.state.heroVideo} />
         <Comments />
         <DisplayedComments comment={this.state.heroVideo.comments}/>
+        </div>
       <NextVideos heroVideo={this.state.heroVideo} video={this.state.video} handleClick={this.handleClick}/>
+      </main>
     </div>
   );
 }

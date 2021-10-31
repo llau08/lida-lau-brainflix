@@ -4,41 +4,50 @@
 
 h3 {
   @include mbody;
-  padding-bottom: 24px;
+  padding-bottom: 1.5rem;
   color: $silver;
+
+  @include tablet {
+    @include tdbody;
+  }
 }
 
 .next {
   padding: 24px 16px 16px 16px;
-  min-width: 320px;
+  min-width: 20rem;
 
   @include tablet {
     padding: 36px 24px 24px 24px;
-    width: 344px;
+    width: 21.5rem;
   }
 
   @include desktop {
     margin-right: 0;
+    padding-right: 0;
   }
 
   &__indv-box {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 16px;
+    margin-bottom: 1rem;
   }
 
   &__img {
-    border-radius: 4px;
-    width: 120px;
-    height: 70px;
+    border-radius: 0.25rem;
+    width: 7.5rem;
+    height: 4.375rem;
     display: flex;
     justify-content: center;
   }
 
   &__names {
     @include mbody;
-    width: 150px;
+    width: 9.375rem;
+
+    @include desktop {
+      width: 10.9375rem;
+    }
   }
 
   &__video-title {
@@ -51,9 +60,11 @@ h3 {
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     text-overflow: ellipsis;
-    margin-bottom: 18px;
+    margin-bottom: 1.125rem;
 
     @include tablet {
+      @include tdsub-header;
+      max-height: 2.5rem;
       -webkit-box-orient: unset;
     }
   }
