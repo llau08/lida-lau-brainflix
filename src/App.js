@@ -7,7 +7,7 @@ import Data from './data/video-details.json';
 import { Component } from 'react';
 import './App.scss';
 import NavBar from './components/NavBar/NavBar';
-
+import {Switch, Route, Link} from 'react-router-dom';
 
 class App extends Component {
   state = {
@@ -27,14 +27,14 @@ class App extends Component {
   return (
     <div className="App">
       <header>
-      <NavBar />
-      <HeroVideo heroVideo={this.state.heroVideo} />
+        <NavBar />
+        <HeroVideo heroVideo={this.state.heroVideo} />
       </header>
       <main className="main">
         <div className="main__content">
-        <AboutVideo video={this.state.heroVideo} />
-        <Comments />
-        <DisplayedComments comment={this.state.heroVideo.comments}/>
+          <AboutVideo video={this.state.heroVideo} />
+          <Comments />
+          <DisplayedComments comment={this.state.heroVideo.comments}/>
         </div>
       <NextVideos heroVideo={this.state.heroVideo} video={this.state.video} handleClick={this.handleClick}/>
       </main>
