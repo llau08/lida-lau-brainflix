@@ -7,7 +7,9 @@ import Data from './data/video-details.json';
 import { Component } from 'react';
 import './App.scss';
 import NavBar from './components/NavBar/NavBar';
-import {Switch, Route, Link} from 'react-router-dom';
+import {BrowserRouter, Switch, Route} from 'react-router-dom';
+import UploadPage from './pages/UploadPage/UploadPage';
+
 
 class App extends Component {
   state = {
@@ -26,10 +28,13 @@ class App extends Component {
   render(){
   return (
     <div className="App">
+      {/* <UploadPage /> */}
+      <BrowserRouter>
       <header>
         <NavBar />
         <HeroVideo heroVideo={this.state.heroVideo} />
       </header>
+      <Switch>
       <main className="main">
         <div className="main__content">
           <AboutVideo video={this.state.heroVideo} />
@@ -38,6 +43,8 @@ class App extends Component {
         </div>
       <NextVideos heroVideo={this.state.heroVideo} video={this.state.video} handleClick={this.handleClick}/>
       </main>
+      </Switch>
+      </BrowserRouter>
     </div>
   );
 }
