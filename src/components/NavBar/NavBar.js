@@ -2,12 +2,15 @@ import Logo from "../../assets/logos/BrainFlix-logo.svg";
 import Avatar from "../../assets/images/Mohan-muruge.jpg";
 import Upload from "../../assets/icons/upload.svg";
 import SearchBar from "../SearchBar/SearchBar";
+import { Switch, Route, Link } from "react-router-dom";
+import HomePage from "../../pages/HomePage/HomePage";
 
-export default function NavBar(){
+export default function NavBar(props){
     return (
         <nav className="nav">
-            <a href="/home">
-            <img className="nav__logo" src={Logo} alt="BrainFlix Logo"></img></a>
+            <Link to="/">
+            <img className="nav__logo" src={Logo} alt="BrainFlix Logo"></img>
+            </Link>
             <div className="nav__box">
             <SearchBar />
             <img className="nav__avatar" src={Avatar} alt="Mohan muruge avatar"/>
