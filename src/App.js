@@ -1,12 +1,11 @@
-import HeroVideo from './components/HeroVideo/HeroVideo';
-import Data from './data/video-details.json';
+
 import { Component } from 'react';
 import './App.scss';
 import NavBar from './components/NavBar/NavBar';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import UploadPage from './pages/UploadPage/UploadPage';
 import HomePage from './pages/HomePage/HomePage';
-import NextVideos from './components/NextVideos/NextVideos';
+
 
 
 class App extends Component {
