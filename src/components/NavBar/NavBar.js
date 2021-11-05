@@ -14,11 +14,11 @@ export default function NavBar(props){
             <div className="nav__box">
             <SearchBar />
             <img className="nav__avatar" src={Avatar} alt="Mohan muruge avatar"/>
-            <Link to="/upload">
             <button className="nav__btn">
+            <Link to="/upload">
                 <img className="nav__icon" src={Upload} alt="upload icon"/>UPLOAD
+                </Link>
             </button>
-            </Link>
             </div>
         </nav>
     )

@@ -1,0 +1,21 @@
+@use "../../App.scss" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.upload {
+  border-top: 1px solid $mercury;
+
+  &__title {
+    @include mpg-header;
+  }
+
+  &__lbl {
+    @include msub-header;
+    color: $silver;
+  }
+
+  &__img {
+    border-radius: 4px;
+    height: 50vw;
+  }
+}
