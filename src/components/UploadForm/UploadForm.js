@@ -1,4 +1,5 @@
 import '../UploadForm/UploadForm.scss';
+import { alert } from 'react-alert';
 
 export default function UploadForm() {
     return(
