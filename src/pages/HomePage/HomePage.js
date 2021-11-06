@@ -4,9 +4,7 @@ import DisplayedComments from "../../components/DisplayedComments/DisplayedComme
 import NextVideos from "../../components/NextVideos/NextVideos";
 import HeroVideo from "../../components/HeroVideo/HeroVideo";
 import { Component } from 'react';
-// import Data from '../../data/video-details.json';
 import axios from "axios";
-
 const apiURL = "https://project-2-api.herokuapp.com/"
 const apiKey = "e70655b6-d394-49a3-b58f-194cce535d6b";
 
@@ -23,26 +21,19 @@ class HomePage extends Component {
             return axios.get(`${apiURL}videos/${response.data[0].id}/?api_key=${apiKey}`)
           .then ((response)=>{
             this.setState ({heroVideo: response.data});
-          }
-          )})}
+          }).catch((error)=>{
+            return error;
+          });
+        })}
 
           componentDidUpdate (prevProps){
-            console.log(prevProps)
             if (prevProps.match.params.id !== this.props.match.params.id)
-            {axios. get (`${apiURL}videos/${this.props.match.params.id}/?api_key=${apiKey}`).then ((response) => {
+            {axios.get (`${apiURL}videos/${this.props.match.params.id}/?api_key=${apiKey}`).then ((response) => {
               this.setState ({heroVideo: response.data})
-            })
+            }).catch((error)=>{
+              return error;
+            });
           }}
-       
-        // handleClick = (videoObj)=>{
-        //   return
-            // const videosCopy = this.state.video;
-            // const index = videosCopy.findIndex((video)=>{
-            //   return video.id === videoObj.id
-            // })
-            // this.setState({heroVideo: videosCopy[index]});
-          // }
-          
 
     render(){
       if (this.state.heroVideo === null)
@@ -55,7 +46,7 @@ class HomePage extends Component {
                 <Comments />
                 <DisplayedComments comment={this.state.heroVideo.comments}/>
             </div>
-            <NextVideos heroVideo={this.state.heroVideo} video={this.state.video} handleClick={this.handleClick}/>
+            <NextVideos heroVideo={this.state.heroVideo} video={this.state.video}/>
       </main>
        
     )}

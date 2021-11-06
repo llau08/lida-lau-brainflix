@@ -3,7 +3,7 @@ import '../DisplayedComments/DisplayedComments.scss';
 export default function DisplayedComments(props){
     return (
         <>
-        {props.comment.map((comment, index)=>{
+        {props.comment.map((comment, i)=>{
              const formatTimestamp = Intl.DateTimeFormat('en-US',{
                 year: "numeric",
                 month: "2-digit",
@@ -11,7 +11,7 @@ export default function DisplayedComments(props){
             }).format(comment.timestamp);
 
             return(
-                <article key={index} className="displayed-comm">
+                <article key={i} className="displayed-comm">
                     <div className="displayed-comm__avatar"></div>
                     <div className="displayed-comm__box">
                         <div className="displayed-comm__header">

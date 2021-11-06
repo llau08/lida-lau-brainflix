@@ -5,7 +5,7 @@ import SearchBar from "../SearchBar/SearchBar";
 import { Link } from "react-router-dom";
 
 
-export default function NavBar(props){
+export default function NavBar(){
     return (
         <nav className="nav">
             <Link to="/">
@@ -14,11 +14,11 @@ export default function NavBar(props){
             <div className="nav__box">
             <SearchBar />
             <img className="nav__avatar" src={Avatar} alt="Mohan muruge avatar"/>
-            <button className="nav__btn">
             <Link to="/upload">
+            <button className="nav__btn">
                 <img className="nav__icon" src={Upload} alt="upload icon"/>UPLOAD
-                </Link>
             </button>
+            </Link>
             </div>
         </nav>
     )

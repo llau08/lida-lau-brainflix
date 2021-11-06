@@ -8,20 +8,18 @@ export default function NextVideos(props){
             <ul>
             {props.video.filter((unfilteredVideo)=>{
                 return (unfilteredVideo.id !== props.heroVideo.id)
-            }).map((video,index)=>{
+            }).map((video,i)=>{
                 if (video.title === props.video.title){return null}
-                // console.log(props);
                 return(
-                    <Link key={index} to={"/videos/"+ video.id}>
-                        <li className="next__indv-box">
-                    {/* <li className="next__indv-box"onClick={()=>props.handleClick(video)}> */}
-                        <img className="next__img"src={video.image} alt="travel"></img>
+                    <li key={i} className="next__indv-box">
+                        <Link to={"/videos/"+ video.id}>
+                        <img className="next__img"src={video.image} alt={video.title}></img>
                         <div className="next__names">
                             <h3 className="next__video-title">{video.title}</h3>
                             <p>{video.channel}</p>
                         </div>
+                        </Link>
                     </li>
-                    </Link>
                 )
             })}
             </ul>
