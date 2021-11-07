@@ -14,6 +14,13 @@ a {
   display: flex;
   align-self: center;
   text-decoration: none;
+  width: 100%;
+  justify-content: center;
+
+  @include tablet {
+    width: auto;
+    justify-content: flex-start;
+  }
 }
 
 .nav {

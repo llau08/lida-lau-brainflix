@@ -12,6 +12,14 @@ h3 {
   }
 }
 
+a {
+  padding: 0;
+}
+
+p {
+  color: $black;
+}
+
 .next {
   padding: 24px 16px 16px 16px;
   min-width: 20rem;
@@ -24,6 +32,7 @@ h3 {
   @include desktop {
     margin-right: 0;
     padding-right: 0;
+    border-left: 1px solid $mercury;
   }
 
   &__indv-box {
@@ -39,11 +48,20 @@ h3 {
     height: 4.375rem;
     display: flex;
     justify-content: center;
+    margin-right: 1rem;
+
+    @include tablet {
+      margin-right: 0;
+    }
   }
 
   &__names {
     @include mbody;
     width: 9.375rem;
+
+    @include tablet {
+      margin-left: 1.5625rem;
+    }
 
     @include desktop {
       width: 10.9375rem;
@@ -66,6 +84,10 @@ h3 {
       @include tdsub-header;
       max-height: 2.5rem;
       -webkit-box-orient: unset;
+    }
+
+    @include desktop {
+      width: 75%;
     }
   }
 }

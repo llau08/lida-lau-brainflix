@@ -1,0 +1,107 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../App.scss" as *;
+
+.main-upload {
+  border-top: 1px solid $mercury;
+  min-width: 20rem;
+
+  @include desktop {
+    padding-left: 8.0625%;
+    padding-right: 8.0625%;
+  }
+
+  &__content {
+    @include desktop {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
+  &__title {
+    @include mpg-header;
+    margin: 1rem;
+
+    @include tablet {
+      border-bottom: 1px solid $mercury;
+      margin-bottom: 1rem;
+      margin-right: 1.5rem;
+      margin-left: 1.5rem;
+    }
+
+    @include desktop {
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+    }
+  }
+
+  &__btn-box {
+    @include tablet {
+      display: flex;
+      justify-content: flex-start;
+      border-top: 1px solid $mercury;
+      flex-direction: row-reverse;
+      padding-top: 1rem;
+      margin-right: 1.5rem;
+      margin-left: 1.5rem;
+      padding-bottom: 1rem;
+    }
+
+    @include desktop {
+      margin-top: 1.25rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__btn--1 {
+    @include msub-header;
+    background-color: $blue;
+    color: $white;
+    border-radius: 0.25rem;
+    border-style: unset;
+    height: 2.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+
+    @include tablet {
+      margin-right: 0;
+    }
+
+    &:hover {
+      background-color: $darkblue;
+      cursor: pointer;
+    }
+
+    @include tablet {
+      width: 9.375rem;
+      @include tdlabel-btn;
+    }
+  }
+  &__btn--2 {
+    margin: 0 auto;
+    padding-top: 2.25rem;
+    color: $blue;
+    @include msub-header;
+    padding-bottom: 2.25rem;
+
+    @include tablet {
+      margin-right: 3.125rem;
+      vertical-align: middle;
+      @include tdbody;
+      padding: 0;
+    }
+  }
+
+  &__icon {
+    position: relative;
+    right: 6.25rem;
+
+    @include tablet {
+      right: 1.875rem;
+    }
+  }
+}

@@ -33,7 +33,7 @@ class HomePage extends Component {
             {axios.get (`${apiURL}videos/${this.props.match.params.id}/?api_key=${apiKey}`).then ((response) => {
               this.setState ({heroVideo: response.data})
             }).catch((error)=>{
-              return (error);
+              console.log(error);
             });
           }}
 
