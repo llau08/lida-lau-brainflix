@@ -106,19 +106,3 @@ a {
     }
   }
 }
-
-//Desktop - Get videos on the side
-.main {
-  @include desktop {
-    display: flex;
-    justify-content: center;
-  }
-}
-.main__content {
-  @include desktop {
-    display: flex;
-    flex-direction: column;
-    width: 57%;
-    border-right: 1px solid $mercury;
-  }
-}

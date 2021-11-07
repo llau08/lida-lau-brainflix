@@ -1,15 +1,14 @@
 import '../../components/NextVideos/NextVideos.scss';
 import { Link } from 'react-router-dom';
 
-export default function NextVideos(props){
+export default function NextVideos({video, heroVideo}){
     return(
         <article className="next">
             <h3>NEXT VIDEOS</h3>
             <ul>
-            {props.video.filter((unfilteredVideo)=>{
-                return (unfilteredVideo.id !== props.heroVideo.id)
+            {video.filter((unfilteredVideo)=>{
+                return (unfilteredVideo.id !== heroVideo.id)
             }).map((video,i)=>{
-                if (video.title === props.video.title){return null}
                 return(
                     <li key={i} className="next__indv-box">
                         <Link to={"/videos/"+ video.id}>

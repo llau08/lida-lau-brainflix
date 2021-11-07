@@ -1,0 +1,17 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.main {
+  @include desktop {
+    display: flex;
+    justify-content: center;
+  }
+}
+.main__content {
+  @include desktop {
+    display: flex;
+    flex-direction: column;
+    width: 57%;
+    border-right: 1px solid $mercury;
+  }
+}

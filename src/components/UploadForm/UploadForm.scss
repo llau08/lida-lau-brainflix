@@ -40,4 +40,11 @@
       font-family: "Avenir Next Reg";
     }
   }
+
+  &__btn {
+    height: 40px;
+    width: 150px;
+    background-color: $blue;
+    color: $white;
+  }
 }
