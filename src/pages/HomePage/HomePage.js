@@ -30,12 +30,21 @@ class HomePage extends Component {
 
           componentDidUpdate (prevProps){
             if (prevProps.match.params.id !== this.props.match.params.id)
-            {axios.get (`${apiURL}videos/${this.props.match.params.id}/?api_key=${apiKey}`).then ((response) => {
+            {
+              if (this.props.match.params.id){
+              axios.get (`${apiURL}videos/${this.props.match.params.id}/?api_key=${apiKey}`).then ((response) => {
               this.setState ({heroVideo: response.data})
             }).catch((error)=>{
               console.log(error);
             });
-          }}
+          } else{
+            axios.get (`${apiURL}videos/${this.state.video[0].id}/?api_key=${apiKey}`).then ((response) => {
+              this.setState ({heroVideo: response.data})
+            }).catch((error)=>{
+              console.log(error);
+            });
+          }
+        }}
 
     render(){
       if (this.state.heroVideo === null)
