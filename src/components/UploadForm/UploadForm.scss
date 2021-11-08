@@ -30,7 +30,7 @@
     width: 18rem;
     border-radius: 0.25rem;
     background-color: $alabaster;
-    border-color: $mercury;
+    border: 1px solid $mercury;
     padding-left: 0.625rem;
     outline-color: $blue;
     margin-bottom: 1rem;
@@ -63,7 +63,7 @@
     }
 
     @include desktop {
-      height: 5.9375rem;
+      min-height: 5.9375rem;
       width: 100%;
     }
 

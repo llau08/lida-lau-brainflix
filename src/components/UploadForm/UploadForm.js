@@ -9,7 +9,7 @@ export default function UploadForm() {
             </div>
             <div className="upl-form__ctnr">
                 <label className="upl-form__lbl" htmlFor="videodescription">ADD A VIDEO DESCRIPTION</label>
-                <textarea className="upl-form__txt-box"name="videodescription" placeholder="Add a description to your"></textarea>
+                <textarea className="upl-form__txt-box"name="videodescription" placeholder="Add a description to your video"></textarea>
             </div>
         </form>
     )

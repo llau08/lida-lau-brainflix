@@ -6,8 +6,7 @@
     display: flex;
     justify-content: center;
   }
-
-  .upload__content {
+  &__content {
     @include desktop {
       display: flex;
       flex-direction: column;

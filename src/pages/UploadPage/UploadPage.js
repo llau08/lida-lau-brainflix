@@ -15,7 +15,7 @@ export default function UploadPage ({video}){
         </div>
         <div className="main-upload__btn-box">
                 <Link to="/">
-                    <button className="main-upload__btn--1" onClick={()=>{alert('Uploaded. Thanks Michael!')}}><img className="main-upload__icon" src={Publish}/>PUBLISH</button>
+                    <button className="main-upload__btn--1" onClick={()=>{alert('Uploaded. Thanks Michael!')}}><img className="main-upload__icon" src={Publish} alt="upload icon"/>PUBLISH</button>
                 </Link>
                 <Link to="/">
                     <p className="main-upload__btn--2">CANCEL</p>
