@@ -6,8 +6,7 @@ import HeroVideo from "../../components/HeroVideo/HeroVideo";
 import { Component } from 'react';
 import './HomePage.scss';
 import axios from "axios";
-const apiURL = "https://project-2-api.herokuapp.com/"
-const apiKey = "e70655b6-d394-49a3-b58f-194cce535d6b";
+const apiURL = "http://localhost:8080/";
 
 
 class HomePage extends Component {
@@ -18,9 +17,10 @@ class HomePage extends Component {
 
         componentDidMount(){
           axios
-          .get(`${apiURL}videos/?api_key=${apiKey}`).then ((response) => {
+          .get(`${apiURL}videos`).then ((response) => {
+            console.log(response);
             this.setState({video: response.data});
-            return axios.get(`${apiURL}videos/${response.data[0].id}/?api_key=${apiKey}`)
+            return axios.get(`${apiURL}videos/${response.data[0].id}`)
           .then ((response)=>{
             this.setState ({heroVideo: response.data});
           }).catch((error)=>{
@@ -32,13 +32,13 @@ class HomePage extends Component {
             if (prevProps.match.params.id !== this.props.match.params.id)
             {
               if (this.props.match.params.id){
-              axios.get (`${apiURL}videos/${this.props.match.params.id}/?api_key=${apiKey}`).then ((response) => {
+              axios.get (`${apiURL}videos/${this.props.match.params.id}`).then ((response) => {
               this.setState ({heroVideo: response.data})
             }).catch((error)=>{
               console.log(error);
             });
           } else{
-            axios.get (`${apiURL}videos/${this.state.video[0].id}/?api_key=${apiKey}`).then ((response) => {
+            axios.get (`${apiURL}videos/${this.state.video[0].id}`).then ((response) => {
               this.setState ({heroVideo: response.data})
             }).catch((error)=>{
               console.log(error);

@@ -18,7 +18,7 @@ class App extends Component {
       </header>
       <Switch>
         <Route path="/" exact component={HomePage} />
-        <Route path="/upload" component={UploadPage} />
+        <Route path="/upload" render={(props)=> {return <UploadPage {...props}/>}}/>
         <Route path="/videos/:id" component={HomePage} />
       </Switch>
       </BrowserRouter>
