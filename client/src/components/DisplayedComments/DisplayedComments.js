@@ -1,5 +1,5 @@
 import '../DisplayedComments/DisplayedComments.scss';
-import formatTimestamp from '../../utilities/Utilities';
+import {formatTimestamp} from '../../utilities/Utilities';
 
 export default function DisplayedComments({comment}){
     return (

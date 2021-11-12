@@ -1,4 +1,4 @@
-export default function formatTimestamp(timestamp){
+function formatTimestamp(timestamp){
    return Intl.DateTimeFormat('en-US',{
         year: "numeric",
         month: "2-digit",
@@ -6,3 +6,6 @@ export default function formatTimestamp(timestamp){
     }).format(timestamp);
 }
 
+ const apiURL = "http://localhost:8080/";
+
+ export {formatTimestamp, apiURL};

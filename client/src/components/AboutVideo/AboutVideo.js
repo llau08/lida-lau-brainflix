@@ -1,7 +1,7 @@
 import views from '../../assets/icons/views.svg';
 import likes from '../../assets/icons/likes.svg';
 import "../../components/AboutVideo/AboutVideo.scss";
-import formatTimestamp from '../../utilities/Utilities';
+import {formatTimestamp} from '../../utilities/Utilities';
 
 export default function AboutVideo ({video}){
     return(

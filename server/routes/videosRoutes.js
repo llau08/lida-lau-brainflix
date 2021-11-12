@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const fs = require('fs');
 const uniqid = require ('uniqid');
-
+const public = "http://localhost:8080/941df2196eab0ef4aa9176e7816018aa.jpg"
 
 let videoList = [];
 
@@ -42,13 +42,14 @@ router.get('/:id', (req, res) => {
 router.post('/', (req, res) => {
     const {title,description,image} = req.body
     const newVid = {title,
-        image,
+        image: public,
         channel: "ARvinMichael",
         description,
         id: uniqid(),
         views: "100",
         likes: "0",
         duration: "4:01",
+        video: "https://project-2-api.herokuapp.com/stream",
         timestamp: Date.now(),
         comments: [{name:"Jesse Cruz",comment:"There’s no place quite like the open ocean. Wind in your sails. The cool mist is perfect to wake you up in the morning and lull you to sleep in the evening. What an experience.",likes:0,timestamp:1632227521000}]
     }

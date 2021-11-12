@@ -1,6 +1,7 @@
 import axios from 'axios';
 import '../UploadForm/UploadForm.scss';
-import image from '../../assets/images/941df2196eab0ef4aa9176e7816018aa.jpg';
+import { apiURL } from '../../utilities/Utilities';
+
 
 export default function UploadForm ({history}) {
 
@@ -8,11 +9,10 @@ export default function UploadForm ({history}) {
         event.preventDefault();
         let newVid = {
             title: event.target.title.value,
-            image: image,
             description: event.target.description.value,
         }
         console.log (newVid);
-        axios.post('http://localhost:8080/videos', newVid)
+        axios.post(`${apiURL}videos`, newVid)
         .then ((res) => {
            console.log (res);
         })
