@@ -5,3 +5,4 @@ export default function formatTimestamp(timestamp){
         day: "2-digit",
     }).format(timestamp);
 }
+

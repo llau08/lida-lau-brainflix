@@ -1,5 +1,6 @@
 import axios from 'axios';
 import '../UploadForm/UploadForm.scss';
+import image from '../../assets/images/941df2196eab0ef4aa9176e7816018aa.jpg';
 
 export default function UploadForm ({history}) {
 
@@ -7,7 +8,7 @@ export default function UploadForm ({history}) {
         event.preventDefault();
         let newVid = {
             title: event.target.title.value,
-            channel: event.target.channel.value,
+            image: image,
             description: event.target.description.value,
         }
         console.log (newVid);
@@ -19,8 +20,9 @@ export default function UploadForm ({history}) {
             console.log (err);
         })
         //should send me to home
-        // history.push('/');
-        // alert('Uploaded. Thanks Michael!');
+        alert('Uploaded. Thanks Michael!');
+        console.log(history);
+        history.push('/');
     }
 
     return(

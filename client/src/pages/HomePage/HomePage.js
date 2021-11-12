@@ -20,9 +20,13 @@ class HomePage extends Component {
           .get(`${apiURL}videos`).then ((response) => {
             console.log(response);
             this.setState({video: response.data});
-            return axios.get(`${apiURL}videos/${response.data[0].id}`)
+            let videoid = response.data[0].id;
+          if (this.props.match.params.id){
+            videoid = this.props.match.params.id;
+          }
+            return axios.get(`${apiURL}videos/${videoid}`)
           .then ((response)=>{
-            this.setState ({heroVideo: response.data});
+            this.setState ({heroVideo: response.data})
           }).catch((error)=>{
             return (error);
           });
