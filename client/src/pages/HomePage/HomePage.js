@@ -7,7 +7,6 @@ import { Component } from 'react';
 import './HomePage.scss';
 import axios from "axios";
 import { apiURL } from "../../utilities/Utilities";
-// const apiURL = "http://localhost:8080/";
 
 
 class HomePage extends Component {

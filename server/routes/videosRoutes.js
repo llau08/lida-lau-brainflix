@@ -46,12 +46,12 @@ router.post('/', (req, res) => {
         channel: "ARvinMichael",
         description,
         id: uniqid(),
-        views: "100",
-        likes: "0",
+        views: "252,162",
+        likes: "151,062",
         duration: "4:01",
         video: "https://project-2-api.herokuapp.com/stream",
         timestamp: Date.now(),
-        comments: [{name:"Jesse Cruz",comment:"There’s no place quite like the open ocean. Wind in your sails. The cool mist is perfect to wake you up in the morning and lull you to sleep in the evening. What an experience.",likes:0,timestamp:1632227521000}]
+        comments: [{name:"Flexbox Froggy",comment:"Justify content!",likes:500,timestamp:1632227521000}]
     }
     videoList.push(newVid);
     fs.writeFile('./data/videos.json', JSON.stringify(videoList), (err) =>{
