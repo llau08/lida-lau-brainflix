@@ -8,6 +8,9 @@ In the project directory, you can run:
 
 ### `npm start`
 
+1. cd into client on one terminal, cd into server on a seperate terminal\*
+2. Run 'npm start' on both terminals to view\*
+
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
