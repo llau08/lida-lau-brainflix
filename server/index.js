@@ -17,5 +17,5 @@ app.use(express.static(path.join(__dirname, "/public/images")));
 app.use('/videos', videoRoutes);
 
 app.listen(PORT, function(){
-    console.log('Express Severus is running on PORT 8080');
+    console.log('Express Server is running on PORT 8080');
 })
